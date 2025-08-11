@@ -1,0 +1,31 @@
+function sumOfDigitUpto(num , initial)
+{
+    if(num === initial) return num
+    return initial + sumOfDigit ( num,  initial + 1)
+}
+console.log(sumOfDigitUpto(10 , 1));
+
+// sum of digits
+
+function sumOfDigit(n)
+{
+    if (n / 10 == 0) return n;
+    return n % 10 + sumOfDigit(Math.floor(n / 10));
+}
+console.log(sumOfDigit(12345));
+
+// reverse a digit
+function revOfDigit(n1 , rev = 0)
+{
+    if (n1 === 0 ) return rev;
+    return revOfDigit(Math.floor(n1 / 10), rev * 10 + n1 % 10);
+}
+console.log(revOfDigit(12345));
+
+// reverse string
+function reverseString (str)
+{
+    if(str.length === 0) return " ";
+    return str.slice(-1) + reverseString(str.slice(0 , -1))
+}
+console.log(reverseString("sowji"));
