@@ -1,6 +1,6 @@
 const isAdam = (n) =>
 {
-    let reverse = (num) => String(num).split(" ").reverse().join(" ");
+    let reverse = (num) => String(num).split("").reverse().join("");
     // let reverse = (num) => Number(String(num).split(" ").reverse().join(" "));
 
     const square = n * n;
@@ -12,3 +12,4 @@ const isAdam = (n) =>
     
 }
 console.log(isAdam(33));
+
